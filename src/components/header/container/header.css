@@ -1,0 +1,22 @@
+.header{
+    position: fixed;
+    top: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    height: 'auto';
+    border-bottom : 1px solid rgb(200, 206, 211);
+    background-color: white;
+    z-index: 99999;
+    display: inline-block;
+}
+
+.pl-3,
+.px-3 {
+  padding-left: 1rem !important; 
+}
+
+.pr-3,
+.px-3 {
+  padding-right: 1rem !important; 
+}

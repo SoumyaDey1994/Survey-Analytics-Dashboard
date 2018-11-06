@@ -1,0 +1,6 @@
+{
+    "name" : "Sayso Survey Analytics Data API Configuration",
+    "departmentDataURI" : "http://msweb02/saysowebapi/isurvey/api/GetSurveyDepartmentResponseInfo/",
+    "timePeriodDataURI" : "http://msweb02/saysowebapi/isurvey/api/GetSurveyOnDuration",
+    "queryResponseDataURI" : "http://msweb02/saysowebapi/isurvey/api/GetSurveyResponseById/"
+}

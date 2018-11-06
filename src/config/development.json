@@ -1,0 +1,8 @@
+{
+    "name" : "Sayso Survey Analytics Data API Configuration",
+    "surveyStatAPIs" : {
+        "departmentDataURI" : "https://apiqa.app.itcinfotech.com/sayso/isurvey/api/GetSurveyDepartmentResponseInfo/",
+        "timePeriodDataURI" : "https://apiqa.app.itcinfotech.com/sayso/isurvey/api/GetSurveyOnDuration",
+        "queryResponseDataURI" : "https://apiqa.app.itcinfotech.com/sayso/isurvey/api/GetSurveyResponseById/"
+    }
+}
