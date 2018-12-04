@@ -4,12 +4,13 @@ const BooleanChart = (props) => {
     return(
         <React.Fragment>
             {
-                props.chartData.map((element) => {
+                props.chartData.map((element, index) => {
                 if(Object.keys(element.answer).length > 0){
                     return( 
                         <Chart element={element} 
                                 getDataForChart={getDataForChart} 
                                 defaultProperty={BooleanChart.defaultProps}
+                                key={index}
                         />
                     )
                 }else

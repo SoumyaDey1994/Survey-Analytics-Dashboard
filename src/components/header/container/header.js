@@ -7,17 +7,17 @@ import DepartmentList from '../../departmentList/departmentList';
 
 const Header = (props) => {
     let allDepartments = props.departmentList.map(obj => obj.department);
-
+    allDepartments.unshift("All Departments");
     return(
         <React.Fragment>
              <Nav className="header" navbar>
                 <NavItem className="px-3">
                     <button className="btn btn-outline-danger btn-sm m-1 float-sm-right" onClick={()=>downloadChartsAsPDF()}>Export as PDF</button>
-                    <button className="btn btn-outline-success btn-sm m-1 float-sm-right">Export as Excel</button>
-                    <button><DepartmentList className="float-sm-left" style={{padding: '0px auto'}} departmentList={allDepartments}></DepartmentList></button>
-                </NavItem>
-                <NavItem>
-                   
+                    {/* <button className="btn btn-outline-success btn-sm m-1 float-sm-right" onClick={props.exportAsExcel}>Export as Excel</button> */}
+                    <DepartmentList className="float-sm-left" style={{padding: '0px auto'}}
+                                    handleFilter={props.handleDepartmentFilter} 
+                                    departmentList={allDepartments}>
+                    </DepartmentList>
                 </NavItem>
             </Nav>
         </React.Fragment>
@@ -26,7 +26,7 @@ const Header = (props) => {
 //Method to create and download PDF from charts
 function downloadChartsAsPDF(){
     const input = document.getElementById('charts');
-    const pageWidth = input.clientWidth;
+    const pageWidth = input.clientWidth * 1.2;
     const pageHeight = input.clientHeight;
 
     html2canvas(input)

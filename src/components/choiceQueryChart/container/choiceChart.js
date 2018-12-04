@@ -3,18 +3,20 @@ import Chart from '../view/chartView';
 
 const ChoiceChart = (props) => {
     return(
-        props.chartData  && props.chartData.map((element) => {
+        props.chartData  && props.chartData.map((element, index) => {
             if(Object.keys(element.answer).length > 0){
                 return( 
                     <Chart element={element} 
                             getDataForChart={getDataForChart} 
                             property={ChoiceChart.defaultProps} 
+                            key={index}
                     />
                 )
-            }else
-                 return 
+            }else{
+                 return(
                     <div style={{display: 'none'}} />
-                                    
+                )
+            }                              
         })
     )
 }

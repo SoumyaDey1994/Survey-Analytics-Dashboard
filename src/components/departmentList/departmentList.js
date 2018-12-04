@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css'
 
 class DepartmentList extends Component{
     constructor(props){
@@ -15,19 +16,20 @@ class DepartmentList extends Component{
             } 
         })
     }
+   
+    shouldComponentUpdate(){
+        return false;
+    }
+    
     render(){
+        const defaltOption = this.props.departmentList[0];
         return (
             <React.Fragment>
-                <Dropdown isOpen={this.state.dropdownOpen} onClick={()=> this.toggleState()}>
-                    <DropdownToggle caret>
-                       Select a Department
-                    </DropdownToggle>
-                    <DropdownMenu>
-                    {
-                        this.props.departmentList.map(dept => <DropdownItem>{dept}</DropdownItem>)
-                    }
-                    </DropdownMenu>
-                </Dropdown>
+                <Dropdown options={this.props.departmentList} 
+                          value={defaltOption}
+                          onChange={(event) => this.props.handleFilter(event.value)} 
+                          placeholder="Select a Department" 
+                />
             </React.Fragment>
         )
     }

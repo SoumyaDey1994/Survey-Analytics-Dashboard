@@ -5,12 +5,13 @@ const MultiChoiceChart = (props) => {
     return(
         <React.Fragment>
             {
-                props.chartData  && props.chartData.map((element) => {
+                props.chartData  && props.chartData.map((element, index) => {
                     if(Object.keys(element.answer).length > 0){
                         return(
                            <Chart element={element} 
                                 getDataForChart={getDataForChart} 
                                 property={MultiChoiceChart.defaultProps} 
+                                key={index}
                             />
                         )
                     }else

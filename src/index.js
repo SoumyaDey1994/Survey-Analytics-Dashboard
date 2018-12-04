@@ -16,7 +16,7 @@ if(window.location.search){
         ReactDOM.render(<NotFound />, document.getElementById('root'));
     else{
         const surveyListId = paramValue.replace(/[{}]/g, "");   // Regex to remove curly braces
-        if(surveyListId == '' || surveyListId == ' ')
+        if(surveyListId === '' || surveyListId === ' ')
             ReactDOM.render(<NotFound />, document.getElementById('root'));
         else
             ReactDOM.render(<App surveyListId={surveyListId}/>, document.getElementById('root'));   //Render App compoment

@@ -140,10 +140,10 @@ function categoriseResponsesForEachResponseType(response){
     let multiChoiceTypeQueryResponseSummary = assignResponseCountToMultiChoiceTypeQueryResults(multiChoiceTypeQuerySchema, multiChoiceTypeQueryResponses);
     let gridchoiceTypeQueryResponseSummary = assignResponseCountToGridChoiceTypeQueryResults(gridChoiceTypeQuerySchema, gridChoiceTypeQueryResponses);
     //set the state of diffrent question type responses count
-    console.log("Boolean Chart Data: "+JSON.stringify(multiChoiceTypeQueryResponseSummary));
-    console.log("Multichoice Chart Data: "+JSON.stringify(booleanTypeQueryResponseSummary));
-    console.log("Choice Chart Data: "+JSON.stringify(choiceTypeQueryResponseSummary));
-    console.log("Gridchoice Chart Data: "+JSON.stringify(gridchoiceTypeQueryResponseSummary));
+    // console.log("Multichoice Chart Data: "+JSON.stringify(multiChoiceTypeQueryResponseSummary));
+    // console.log("Boolean Chart Data: "+JSON.stringify(booleanTypeQueryResponseSummary));
+    // console.log("Choice Chart Data: "+JSON.stringify(choiceTypeQueryResponseSummary));
+    // console.log("Gridchoice Chart Data: "+JSON.stringify(gridchoiceTypeQueryResponseSummary));
     updateState.call(this, choiceTypeQueryResponseSummary, booleanTypeQueryResponseSummary, multiChoiceTypeQueryResponseSummary, gridchoiceTypeQueryResponseSummary)
 }
 //Update the state Object

@@ -10,6 +10,7 @@ const GridChart = (props) => {
                       item={item}
                       getDataForChart={getDataForChart}
                       property={props}
+                      key={index}
                 />
            )
         })
